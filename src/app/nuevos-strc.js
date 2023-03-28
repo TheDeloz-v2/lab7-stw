@@ -34,7 +34,7 @@ export const Nuevos = () => {
 
   var col4 = document.createElement("div");
   col4.classList.add("col-6");
-  newCard("https://us.123rf.com/450wm/gatordawg/gatordawg1504/gatordawg150400051/39441697-ilustraci%C3%B3n-de-un-dise%C3%B1o-del-s%C3%ADmbolo-m%C3%A1gico-en-el-fondo-del-papel-de-pergamino-en-una-relaci%C3%B3n-de-as.jpg?ver=6","google.com", "El Ciclo", "Diego Lemus", "Adéntrate en esta nueva historia...", col4);
+  newCard("https://us.123rf.com/450wm/gatordawg/gatordawg1504/gatordawg150400051/39441697-ilustraci%C3%B3n-de-un-dise%C3%B1o-del-s%C3%ADmbolo-m%C3%A1gico-en-el-fondo-del-papel-de-pergamino-en-una-relaci%C3%B3n-de-as.jpg?ver=6","pagina1.html", "El Ciclo", "Diego Lemus", "Adéntrate en esta nueva historia...", col4);
   row.appendChild(col4);
 
   var col4 = document.createElement("div");
