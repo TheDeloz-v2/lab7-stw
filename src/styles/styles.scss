@@ -3,10 +3,41 @@ body {
   }
   
   h1 {
-    color: whitesmoke;
+    animation: pulse 5s infinite;
     font-size: 36px;
     padding: 2px;
-    text-shadow: 2px 2px #161a1d;
+    text-shadow: 3px 3px #161a1d;
+  }
+  
+  @keyframes pulse {
+    0% {
+      color: whitesmoke;
+    }
+  
+    100% {
+      color: yellow;
+    }
+  }
+  
+  h2 {
+    animation-name: swing;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes swing {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(-10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
   }
   
   img {
@@ -14,6 +45,29 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+  
+    &:hover {
+      animation: shake 0.5s;
+    }
+  }
+  
+  /*Definición de la animación*/
+  @keyframes shake {
+    0% {
+      transform: translate(0);
+    }
+  
+    10%, 90% {
+      transform: translate(-5px, 0);
+    }
+  
+    30%, 70% {
+      transform: translate(5px, 0);
+    }
+  
+    50% {
+      transform: translate(0);
+    }
   }
   
   ul {
@@ -43,4 +97,3 @@ body {
   #structure {
     margin: 1rem;
   }
-  
