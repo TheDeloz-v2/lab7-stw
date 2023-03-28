@@ -1,5 +1,18 @@
 
 export const Pagina1 = () => {
+    var main = document.createElement("div");
+    main.style.width = "100%";
+    main.style.height = "100%";
+
+    var title = document.createElement("h2");
+    title.textContent = "El Ciclo";
+    title.style.textAlign = "center";
+    title.style.color = "black";
+    title.style.textShadow = "2px 2px 5px white";
+    title.style.marginTop = "20px";
+    title.style.marginBottom = "20px";
+    main.appendChild(title);
+    
     var pagina = document.createElement("div");
     pagina.style.backgroundColor = "white";
     pagina.style.width = "60%";
@@ -18,7 +31,7 @@ export const Pagina1 = () => {
     var brr = document.createElement("br");
     pagina.appendChild(brr);
 
-    var pagetitle = document.createElement("h2");
+    var pagetitle = document.createElement("h3");
     pagetitle.textContent = "Pagina 1";
     pagina.appendChild(pagetitle);
 
@@ -68,8 +81,9 @@ export const Pagina1 = () => {
     ul.appendChild(nextpage);
 
     linkdiv.appendChild(ul);
-
     pagina.appendChild(linkdiv);
+
+    main.appendChild(pagina);
     
-    return pagina;
+    return main;
 }

@@ -1,5 +1,6 @@
 import { Header } from "./header.js";
 import { Footer } from "./footer.js";
+import { Index } from "./index-strc.js";
 import { Nuevos } from "./nuevos-strc.js";
 import { Structure2 } from "./structure2.js";
 import { Pagina1 } from "./pagina1.js";
@@ -9,6 +10,10 @@ import { Pagina3 } from "./pagina3.js";
 export const startApp = () => {
   document.getElementById("header").appendChild(Header());
   
+  if (document.getElementById("index-strc") != null) {
+    document.getElementById("index-strc").appendChild(Index());
+  }
+
   if (document.getElementById("nuevos-strc") != null) {
     document.getElementById("nuevos-strc").appendChild(Nuevos());
   }

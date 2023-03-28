@@ -1,4 +1,3 @@
 import {startApp} from './app/app.js'
-import 'bootstrap/dist/css/bootstrap.css'
-import '../src/styles.css' 
+import '../src/app/styles.js';
 startApp()

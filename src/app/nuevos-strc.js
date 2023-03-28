@@ -6,6 +6,15 @@ export const Nuevos = () => {
   row.classList.add("row");
   row.style.width = "100%";
 
+  var title = document.createElement("h2");
+  title.textContent = "Nuevos Lanzamientos";
+  title.style.textAlign = "center";
+  title.style.color = "black";
+  title.style.textShadow = "2px 2px 5px white";
+  title.style.marginTop = "20px";
+  title.style.marginBottom = "40px";
+  row.appendChild(title);
+
   // Adding small cards
   var col4 = document.createElement("div");
   col4.classList.add("col-2");

@@ -1,19 +1,22 @@
+const { merge } = require('webpack-merge')
+const common = require('./webpack.config.js')
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-    mode: 'development',
-
+module.exports = merge(common, {
+    mode: 'production',
+    performance: {
+        hints: false,
+    },
     entry: {
         index: './src/index.js',
     },
-    output: {
+      output: {
         path: path.resolve(__dirname, 'dist_webpack'),
         filename: '[name].bundle.js',
-    },
-
-    plugins: [new MiniCssExtractPlugin({
+      },
+      plugins: [new MiniCssExtractPlugin({
         filename: 'bundle.css'
       }), new HtmlWebpackPlugin({
         template: './src/index.html',
@@ -48,4 +51,4 @@ module.exports = {
             },
         ],
     },
-};
+})
