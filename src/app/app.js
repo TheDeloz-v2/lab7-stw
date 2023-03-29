@@ -2,7 +2,7 @@ import { Header } from "./header.js";
 import { Footer } from "./footer.js";
 import { Index } from "./index-strc.js";
 import { Nuevos } from "./nuevos-strc.js";
-import { Structure2 } from "./structure2.js";
+import { Populares } from "./populares-strc.js";
 import { Pagina1 } from "./pagina1.js";
 import { Pagina2 } from "./pagina2.js";
 import { Pagina3 } from "./pagina3.js";
@@ -21,7 +21,7 @@ export const startApp = () => {
     document.getElementById("footer").appendChild(Footer());
   }
   if (document.getElementById("populares-strc") != null) {
-    document.getElementById("populares-strc").appendChild(Structure2());
+    document.getElementById("populares-strc").appendChild(Populares());
   }
   if (document.getElementById("pagina1") != null) {
     document.getElementById("pagina1").appendChild(Pagina1());
