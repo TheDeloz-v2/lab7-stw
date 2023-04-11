@@ -13,7 +13,7 @@ module.exports = merge(common, {
         index: './src/index.js',
     },
       output: {
-        path: path.resolve(__dirname, 'dist_webpack'),
+        path: path.resolve(__dirname, 'dist_webpack_babel'),
         filename: '[name].bundle.js',
       },
       plugins: [new MiniCssExtractPlugin({

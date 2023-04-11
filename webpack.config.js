@@ -9,7 +9,7 @@ module.exports = {
         index: './src/index.js',
     },
     output: {
-        path: path.resolve(__dirname, 'dist_webpack'),
+        path: path.resolve(__dirname, 'dist_webpack_babel'),
         filename: '[name].bundle.js',
     },
 
@@ -46,7 +46,13 @@ module.exports = {
                 test: /.css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
-            
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: 'babel-loader',
+                }
+              }
         ],
     },
 };

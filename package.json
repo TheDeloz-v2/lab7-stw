@@ -6,12 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "buildprod": "webpack --mode production"
+    "buildprod": "webpack --mode production",
+    "start-webpack": "webpack",
+    "start-babel": "babel src --out-dir dist_babel --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
+    "@babel/plugin-transform-arrow-functions": "^7.20.7",
+    "@babel/plugin-transform-jscript": "^7.20.2",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "webpack": "^5.76.2",
@@ -19,8 +29,11 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.21.0",
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.3",
+    "polyfills": "^1.9.5",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2"
